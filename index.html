@@ -21,8 +21,6 @@ body {
   line-height: 1.6;
 }
 
-    }
-
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -129,19 +127,24 @@ body {
       flex-wrap: wrap;
     }
 .video-section iframe {
-  width: 300px; /* ya jo size tum rakho */
-  height: 533px; /* short format */
+  width: 300px;
+  height: 533px;
   border-radius: 12px;
   border: none;
-  margin: 10px; /* gap between videos */
+  margin: 10px;
 }
 
-    }
     @media (max-width: 768px) {
+      .video-section {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow-x: visible;
+      }
       .video-section iframe {
-        transform: scale(1); /* normal size on mobile */
-        width: 48%; /* side-by-side layout */
+        transform: scale(1);
+        width: 48%;
         height: 340px;
+        margin: 0;
       }
     }
 
@@ -203,8 +206,12 @@ body {
 
     <!-- Video Section -->
     <section class="video-section">
-      <iframe src="https://www.youtube.com/embed/bwL2mbMklkY?rel=0&modestbranding=1&showinfo=0&controls=0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/x-QoqPBL5dM?rel=0&modestbranding=1&showinfo=0&controls=0" allowfullscreen></iframe>
+      <iframe 
+        src="https://www.youtube.com/embed/bwL2mbMklkY?rel=0&modestbranding=1&showinfo=0&controls=0" 
+        loading="lazy" allowfullscreen></iframe>
+      <iframe 
+        src="https://www.youtube.com/embed/x-QoqPBL5dM?rel=0&modestbranding=1&showinfo=0&controls=0" 
+        loading="lazy" allowfullscreen></iframe>
     </section>
 
     <footer>© 2025 Shakir Uddin</footer>
