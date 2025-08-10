@@ -1,166 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>e for edit - Shakir Uddin</title>
-<style>
-  /* Reset and base */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    min-height: 100vh;
-    position: relative;
-  }
-  /* Dark overlay */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.65);
-    z-index: 0;
-  }
-  /* Container */
-  .container {
-    position: relative;
-    z-index: 1;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-  }
-
-  /* Company Header */
-  header {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-  }
-  header h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: #00ff99;
-    user-select: none;
-  }
-  header .subtext {
-    font-size: 1.1rem;
-    color: #88ffb0;
-    margin-top: 5px;
-    user-select: none;
-  }
-
-  /* Editing Timeline Shape Header */
-  .timeline-header {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 255, 153, 0.15);
-    border-radius: 30px 0 0 30px;
-    padding: 10px 30px;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #00ff99;
-    opacity: 0.2;
-    pointer-events: none;
-    user-select: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    letter-spacing: 1px;
-    box-shadow: 0 0 15px rgba(0,255,153,0.2);
-  }
-
-  /* Glass Card for main content */
-  .glass-box {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 20px;
-    border: 1px solid rgba(0,255,153,0.3);
-    box-shadow: 0 8px 32px 0 rgba(0, 255, 153, 0.2);
-    padding: 40px 30px;
-    max-width: 600px;
-    text-align: center;
-  }
-  .glass-box h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: white;
-  }
-  .glass-box p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #e0e0e0;
-  }
-  .glass-box .contact-btn {
-    margin-top: 30px;
-    background-color: #00ff99;
-    color: #121212;
-    padding: 14px 30px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-  }
-  .glass-box .contact-btn:hover {
-    background-color: #00cc7a;
-  }
-
-  /* Footer */
-  footer {
-    position: relative;
-    margin-top: auto;
-    padding: 15px 0;
-    color: #44ffb0;
-    font-size: 0.9rem;
-    user-select: none;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2.2rem;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>e for edit - Shakir Uddin</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('https://static.clideo.com/files/content/video-timeline.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Timeline header - glass style with opacity */
     .timeline-header {
-      font-size: 1.1rem;
-      padding: 6px 20px;
-      top: 10px;
-      right: 10px;
-    }
-    .glass-box {
-      padding: 30px 20px;
-      max-width: 90%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 1.8rem;
-    }
-    .glass-box h2 {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 255, 153, 0.15);
+      border-radius: 30px 0 0 30px;
+      padding: 12px 28px;
+      font-weight: 700;
       font-size: 1.5rem;
+      color: #00ff99;
+      opacity: 0.18;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px rgba(0,255,153,0.2);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 10;
     }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      user-select: none;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #00ff99;
+    }
+    header .subtext {
+      font-size: 1.1rem;
+      color: #88ffb0;
+      margin-top: 6px;
+    }
+
+    /* Glass box */
+    .glass-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid rgba(0,255,153,0.3);
+      box-shadow: 0 8px 32px 0 rgba(0, 255, 153, 0.2);
+      padding: 40px 30px;
+      max-width: 650px;
+      width: 100%;
+      color: #e0e0e0;
+      text-align: center;
+      user-select: text;
+    }
+
+    .glass-box h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
     .glass-box p {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 35px;
     }
-    .glass-box .contact-btn {
-      padding: 12px 20px;
+
+    .contact-btn {
+      background-color: #00ff99;
+      color: #121212;
+      padding: 14px 36px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .contact-btn:hover {
+      background-color: #00cc7a;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 15px 0;
+      color: #44ffb0;
       font-size: 0.9rem;
+      user-select: none;
+      text-align: center;
     }
-  }
-</style>
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+      .timeline-header {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+        top: 15px;
+        right: 15px;
+      }
+      .glass-box {
+        padding: 30px 20px;
+        max-width: 90%;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .glass-box h2 {
+        font-size: 1.6rem;
+      }
+      .glass-box p {
+        font-size: 1rem;
+      }
+      .contact-btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="timeline-header">Editing Timeline</div>
@@ -171,7 +171,8 @@
     </header>
     <main class="glass-box">
       <h2>Professional Video Editing Services</h2>
-      <p>Fast, creative, and reliable editing for your videos. Let's bring your vision to life with high-quality editing, transitions, effects, and storytelling.</p>
+      <p>Fast, creative, and reliable editing for your videos.<br />
+      Let's bring your vision to life with high-quality editing, transitions, effects, and storytelling.</p>
       <a href="mailto:shakir@example.com" class="contact-btn">Contact Me</a>
     </main>
     <footer>© 2025 Shakir Uddin</footer>
