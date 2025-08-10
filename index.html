@@ -150,4 +150,74 @@
     }
 
     footer {
-      margin
+      margin-top: auto;
+      padding: 15px 0;
+      color: #44ffb0;
+      font-size: 0.9rem;
+      user-select: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+      .timeline-header {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+        top: 15px;
+        right: 15px;
+      }
+      .glass-box {
+        padding: 30px 20px;
+        max-width: 90%;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .glass-box h2 {
+        font-size: 1.6rem;
+      }
+      .glass-box p {
+        font-size: 1rem;
+      }
+      .contact-btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
+      .videos-wrapper iframe {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline-header">Editing Timeline</div>
+  <div class="container">
+    <header>
+      <h1>e for edit</h1>
+      <div class="subtext">Shakir Uddin</div>
+    </header>
+    <main class="glass-box">
+      <h2>Professional Video Editing Services</h2>
+      <p>Fast, creative, and reliable editing for your videos.<br />
+      Let's bring your vision to life with high-quality editing, transitions, effects, and storytelling.</p>
+      <a href="mailto:shakir@example.com" class="contact-btn">Contact Me</a>
+    </main>
+
+    <section class="videos-section">
+      <h2>Latest Editing Shorts</h2>
+      <div class="videos-wrapper">
+        <iframe src="https://www.youtube.com/embed/bwL2mbMklkY?rel=0&autoplay=0" title="YouTube Short 1" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/x-QoqPBL5dM?rel=0&autoplay=0" title="YouTube Short 2" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <footer>© 2025 Shakir Uddin</footer>
+  </div>
+</body>
+</html>
