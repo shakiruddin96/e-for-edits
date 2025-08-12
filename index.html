@@ -15,11 +15,7 @@
       color: #fff;
       line-height: 1.6;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 20px;
+      padding-top: 60px; /* space for fixed header */
     }
     a {
       color: #00ff00;
@@ -29,25 +25,59 @@
     a:hover {
       color: #39ff14;
     }
+
+    /* Header styling */
     header {
-      text-align: center;
-      margin-bottom: 40px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      background-color: #111;
+      box-shadow: 0 2px 8px rgba(0,255,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 9999;
     }
-    header h1 {
-      font-size: 3rem;
-      color: #00ff00;
-      letter-spacing: 4px;
-      margin-bottom: 8px;
-    }
-    header p {
+    .header-left {
+      font-weight: 700;
       font-size: 1.2rem;
-      color: #ccc;
+      color: #00ff00;
+    }
+    .header-center {
+      display: flex;
+      gap: 30px;
       font-weight: 600;
     }
+    .header-center a {
+      font-size: 1rem;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .header-center a:hover,
+    .header-center a.active {
+      border-bottom: 2px solid #00ff00;
+      color: #39ff14;
+    }
+    .header-right button {
+      background-color: #00ff00;
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .header-right button:hover {
+      background-color: #39ff14;
+    }
+
+    /* Sections styling */
     section {
       max-width: 900px;
       width: 100%;
-      margin-bottom: 50px;
+      margin: 40px auto;
       padding: 20px;
       background: #111;
       border-radius: 10px;
@@ -83,7 +113,7 @@
     footer {
       color: #555;
       font-size: 0.9rem;
-      margin-top: auto;
+      margin-top: 40px;
       padding: 10px 0;
       text-align: center;
       width: 100%;
@@ -103,10 +133,27 @@
       color: #000;
     }
     @media(max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
+      header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+      }
+      .header-center {
+        gap: 15px;
+        margin: 10px 0;
+        width: 100%;
+        justify-content: center;
+      }
+      .header-right {
+        width: 100%;
+        text-align: center;
+      }
+      .header-right button {
+        width: 100%;
+        max-width: 200px;
       }
       section {
+        margin: 30px 15px;
         padding: 15px;
       }
     }
@@ -115,39 +162,55 @@
 <body>
 
   <header>
-    <h1>E for Edit</h1>
-    <p>Crafting Engaging Videos & Digital Stories — by Shakir Uddin</p>
+    <div class="header-left">
+      <a href="https://eforedit.in" target="_blank" rel="noopener" style="color:#00ff00; text-decoration:none;">eforedit.in</a>
+    </div>
+    <nav class="header-center">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-right">
+      <button onclick="window.location.href='mailto:shakir.uddin@example.com'">Book a Call</button>
+    </div>
   </header>
+
+  <section id="home" class="home">
+    <h2>Welcome to E for Edit</h2>
+    <p style="font-size:1.2rem; color:#ddd;">
+      Hello! I’m <strong>Shakir Uddin</strong>, your go-to short-form video editor and digital storyteller. Let’s create something amazing together!
+    </p>
+  </section>
 
   <section class="about" id="about">
     <h2>About Me</h2>
     <p>
-      Hi, I’m Shakir Uddin, a passionate short-form video editor and content creator. With years of experience transforming raw footage into captivating stories, I help brands and individuals stand out online. Creativity, precision, and timely delivery are my promises.
+      I specialize in transforming raw footage into engaging short videos optimized for Instagram, YouTube, and TikTok. With a keen eye for detail and storytelling, I bring your brand’s vision to life.
     </p>
   </section>
 
   <section class="services" id="services">
     <h2>Services</h2>
     <ul>
-      <li>Short-form video editing for Instagram, YouTube & TikTok</li>
+      <li>Short-form video editing for social media</li>
       <li>Motion graphics & animated captions</li>
-      <li>Social media content strategy consultation</li>
-      <li>Custom video intros, outros, and logo animations</li>
+      <li>Custom video intros & logo animations</li>
+      <li>Social media content strategy consulting</li>
     </ul>
   </section>
 
   <section class="projects" id="projects">
     <h2>Featured Projects</h2>
     <ul>
-      <li><strong>Forex Trading Insights:</strong> A series of short videos explaining forex trading concepts to beginners.</li>
-      <li><strong>Client Promo Campaign:</strong> Created dynamic promo reels for a startup’s product launch.</li>
-      <li><strong>Brand Storytelling:</strong> Developed an animated video narrating a brand’s journey and values.</li>
+      <li><strong>Forex Trading Insights:</strong> Educational videos explaining forex trading basics.</li>
+      <li><strong>Promo Campaigns:</strong> Dynamic video reels for startups and product launches.</li>
+      <li><strong>Brand Storytelling:</strong> Animated narratives highlighting brand journeys.</li>
     </ul>
   </section>
 
   <section class="contact" id="contact">
     <h2>Contact Me</h2>
-    <p>If you want to collaborate or have a project in mind, let’s connect!</p>
+    <p>Ready to collaborate? Reach out and let’s bring your ideas to life!</p>
     <a href="mailto:shakir.uddin@example.com" target="_blank" rel="noopener">Email: shakir.uddin@example.com</a>
   </section>
 
