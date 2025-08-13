@@ -1,222 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>E for Edit | Shakir Uddin Portfolio</title>
-  <style>
-    /* Reset & base */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    body {
-      background-color: #000;
-      color: #fff;
-      line-height: 1.6;
-      min-height: 100vh;
-      padding-top: 60px; /* space for fixed header */
-    }
-    a {
-      color: #00ff00;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #39ff14;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E FOR EDIT - Professional Video Editing by Shakir Uddin</title>
+    <meta name="description" content="Professional video editing services by Shakir Uddin. Specializing in music videos, commercials, documentaries, and corporate content. Transform your vision into cinematic reality." />
+    <meta name="author" content="Shakir Uddin" />
+    <meta name="keywords" content="video editing, video editor, post production, music video, commercial, documentary, Shakir Uddin, E FOR EDIT" />
 
-    /* Header styling */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 60px;
-      background-color: #111;
-      box-shadow: 0 2px 8px rgba(0,255,0,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      z-index: 9999;
-    }
-    .header-left {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #00ff00;
-    }
-    .header-center {
-      display: flex;
-      gap: 30px;
-      font-weight: 600;
-    }
-    .header-center a {
-      font-size: 1rem;
-      padding: 6px 0;
-      border-bottom: 2px solid transparent;
-    }
-    .header-center a:hover,
-    .header-center a.active {
-      border-bottom: 2px solid #00ff00;
-      color: #39ff14;
-    }
-    .header-right button {
-      background-color: #00ff00;
-      color: #000;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .header-right button:hover {
-      background-color: #39ff14;
-    }
+    <meta property="og:title" content="E FOR EDIT - Professional Video Editing by Shakir Uddin" />
+    <meta property="og:description" content="Professional video editing services specializing in music videos, commercials, documentaries, and corporate content. Transform your vision into cinematic reality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    /* Sections styling */
-    section {
-      max-width: 900px;
-      width: 100%;
-      margin: 40px auto;
-      padding: 20px;
-      background: #111;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #00ff00aa;
-    }
-    section h2 {
-      color: #00ff00;
-      margin-bottom: 15px;
-      font-size: 2rem;
-      border-bottom: 2px solid #00ff00;
-      padding-bottom: 8px;
-    }
-    .about p, .contact p {
-      font-size: 1.1rem;
-      color: #ddd;
-    }
-    .services ul, .projects ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .services li, .projects li {
-      background: #222;
-      margin-bottom: 12px;
-      padding: 15px 20px;
-      border-left: 5px solid #00ff00;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-      cursor: default;
-    }
-    .services li:hover, .projects li:hover {
-      background: #333;
-    }
-    footer {
-      color: #555;
-      font-size: 0.9rem;
-      margin-top: 40px;
-      padding: 10px 0;
-      text-align: center;
-      width: 100%;
-    }
-    .contact a {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 10px 15px;
-      background: #00ff00;
-      color: #000;
-      border-radius: 5px;
-      font-weight: 700;
-      transition: background 0.3s ease;
-    }
-    .contact a:hover {
-      background: #39ff14;
-      color: #000;
-    }
-    @media(max-width: 600px) {
-      header {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px 15px;
-      }
-      .header-center {
-        gap: 15px;
-        margin: 10px 0;
-        width: 100%;
-        justify-content: center;
-      }
-      .header-right {
-        width: 100%;
-        text-align: center;
-      }
-      .header-right button {
-        width: 100%;
-        max-width: 200px;
-      }
-      section {
-        margin: 30px 15px;
-        padding: 15px;
-      }
-    }
-  </style>
-</head>
-<body>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-  <header>
-    <div class="header-left">
-      <a href="https://eforedit.in" target="_blank" rel="noopener" style="color:#00ff00; text-decoration:none;">eforedit.in</a>
-    </div>
-    <nav class="header-center">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="header-right">
-      <button onclick="window.location.href='mailto:shakir.uddin@example.com'">Book a Call</button>
-    </div>
-  </header>
-
-  <section id="home" class="home">
-    <h2>Welcome to E for Edit</h2>
-    <p style="font-size:1.2rem; color:#ddd;">
-      Hello! I’m <strong>Shakir Uddin</strong>, your go-to short-form video editor and digital storyteller. Let’s create something amazing together!
-    </p>
-  </section>
-
-  <section class="about" id="about">
-    <h2>About Me</h2>
-    <p>
-      I specialize in transforming raw footage into engaging short videos optimized for Instagram, YouTube, and TikTok. With a keen eye for detail and storytelling, I bring your brand’s vision to life.
-    </p>
-  </section>
-
-  <section class="services" id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Short-form video editing for social media</li>
-      <li>Motion graphics & animated captions</li>
-      <li>Custom video intros & logo animations</li>
-      <li>Social media content strategy consulting</li>
-    </ul>
-  </section>
-
-  <section class="projects" id="projects">
-    <h2>Featured Projects</h2>
-    <ul>
-      <li><strong>Forex Trading Insights:</strong> Educational videos explaining forex trading basics.</li>
-      <li><strong>Promo Campaigns:</strong> Dynamic video reels for startups and product launches.</li>
-      <li><strong>Brand Storytelling:</strong> Animated narratives highlighting brand journeys.</li>
-    </ul>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>Ready to collaborate? Reach out and let’s bring your ideas to life!</p>
-    <a href="mailto:shakir.uddin@example.com" target="_blank" rel="noopener">Email: shakir.uddin@example.com</a>
-  </section>
-
-  <footer>
-    &copy; 2025 E for Edit — Shakir Uddin
-  </footer>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
